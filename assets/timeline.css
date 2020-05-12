@@ -39,14 +39,15 @@ h2 {
   transition: fill 1s, r 0.9s;
   -webkit-transition: fill 1s, r 0.9s;
 }
-.text-date,
+/* .text-date,
 .text-position {
   transition: opacity 0.7s ease-in-out;
   -webkit-transition: opacity 0.7s ease-in-out;
-}
+} */
 .text-date {
   fill: #888;
   font-family: 'Thasadith', sans-serif;
+  font-size: 95%;
 }
 .details .text-date {
   margin-right: 15px;
@@ -74,6 +75,7 @@ h2 {
 .text-desc {
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
+  font-size: 95%;
 }
 .text-desc {
   color: #444;
