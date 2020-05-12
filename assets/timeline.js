@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function drawChart() {
   const svg = d3.select(" #timelineChart").append("svg").attr('id','Chart').attr("width", '100%').attr("height", 500);
-  d3.json("https://raw.githubusercontent.com/c-c-l/D3ITL/master/data/timeline.json").then(function(data) {
+  d3.json("https://raw.githubusercontent.com/hanesy/hanesy.github.io/master/data/timeline.json").then(function(data) {
     svg.append('line').attr('class', 'timeline-base')
       .attr("x1", 0)
       .attr("y1", 100)
