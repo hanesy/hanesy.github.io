@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function drawChart() {
   const svg = d3.select(" #timelineChart").append("svg").attr('id','Chart').attr("width", '100%').attr("height", 500);
-  // d3.json("data/timeline.json").then(function(data) {
-    d3.json("https://raw.githubusercontent.com/hanesy/hanesy.github.io/master/data/timeline.json").then(function(data) {
+  d3.json("data/timeline.json").then(function(data) {
+    // d3.json("https://raw.githubusercontent.com/hanesy/hanesy.github.io/master/data/timeline.json").then(function(data) {
     svg.append('line').attr('class', 'timeline-base')
       .attr("x1", 0)
       .attr("y1", 100)
@@ -29,7 +29,7 @@ function drawChart() {
 
     let scaleLine = d3.scaleLinear()
       .domain([1285891200000, Date.now()])
-      .range([getLineVal('min') + 400 , getLineVal('max') - 50]); // OFFSET = 20
+      .range([getLineVal('min') + 250 , getLineVal('max') - 80]); // OFFSET = 20
 
     let scaleCircle = d3.scaleLinear()
       .domain([moment.duration(3,'d').asMilliseconds(), moment.duration(10,'y').asMilliseconds()])
@@ -41,7 +41,7 @@ function drawChart() {
     group.append('circle')
       .attr('cx', function(data) {return scaleLine(convertToTimeStamp(data.startDate));})
       .attr('cy', 100)
-      .attr('r', function(data) {return scaleCircle(convertToTimeStamp(data.endDate) - convertToTimeStamp(data.startDate));})
+      .attr('r', function(data) {return scaleCircle((convertToTimeStamp(data.endDate) - convertToTimeStamp(data.startDate))*.70);})
       .attr('fill-opacity', 0.5)
       .attr('class', function(data) { return('circle-category circle-' + data.category.toLowerCase())})
       .attr('id', function(data) {
@@ -53,7 +53,7 @@ function drawChart() {
         d3.select(this).classed('circle-hovered', true);
         d3.select(this.parentNode).selectAll('text').style('opacity', 1);
         d3.select(this.parentNode).selectAll('.text-place').classed('hovered', true).style('opacity', 0);
-        d3.select(this.parentNode).selectAll('.text-desc').classed('hovered', true).style('opacity', 0);
+        // d3.select(this.parentNode).selectAll('.text-desc').classed('hovered', true).style('opacity', 0);
         d3.select(this.parentNode).selectAll('.text-date-end').classed('hovered', true).style('opacity', 0);
       })
       // When click a circle
@@ -86,10 +86,10 @@ function drawChart() {
       .style('opacity', 0)
       .text(function(data) { return(data.name);})
       .attr('x', function(data) {
-        let elementWitdh = this.getBoundingClientRect().width;
+        let elementWidth = this.getBoundingClientRect().width;
         // Avoid overflow
-        if(scaleLine(convertToTimeStamp(data.startDate)) + elementWitdh >= getLineVal('max')) {
-          return scaleLine(convertToTimeStamp(data.startDate)) - elementWitdh;
+        if(scaleLine(convertToTimeStamp(data.startDate)) + elementWidth >= getLineVal('max')) {
+          return scaleLine(convertToTimeStamp(data.startDate)) - elementWidth;
         }
         else {
           return scaleLine(convertToTimeStamp(data.startDate));
@@ -100,20 +100,25 @@ function drawChart() {
 
     group.append('text')
       .text(function(data) {
-      // Get only YYYY-MM
-      if(data.startDate.length > 7) {
-        return (data.startDate.slice(0,7))
-      }
-      else {
-        return(data.startDate)
-      }
+      var start = String(data.startDate)
+      var end = String(data.endDate)
+      var dateString = start + " to " + end
+      return (dateString)
+      // if(data.startDate.length > 7) {
+      //   return (data.startDate.slice(0,7))
+      // }
+      // else {
+      //   return(data.startDate)
+      // }
     })
+
+
     .attr('x', function(data) {
       // Get sibling to have the len and align the date
-      let elementWitdh= this.getBoundingClientRect().width;
+      let elementWidth= this.getBoundingClientRect().width;
       let positionWidth = this.parentNode.querySelector('text.text-position').getBoundingClientRect().width;
       if(scaleLine(convertToTimeStamp(data.startDate)) + positionWidth >= getLineVal('max')) {
-        return scaleLine(convertToTimeStamp(data.startDate)) - elementWitdh;
+        return scaleLine(convertToTimeStamp(data.startDate)) - elementWidth;
       }
       else {
         return scaleLine(convertToTimeStamp(data.startDate));
@@ -126,7 +131,7 @@ function drawChart() {
     data.map(d => {
       let details = d3.select('#timelineChart').append('div').classed('details', true).classed('details-' + d.category.toLowerCase(), true).attr('id', 'details-' + d.id);
       details.append('i').classed('material-icons close-icon', true).text('close');
-      details.append('div').classed('title', true).append('span').classed('date text-date date-title', true).text(d.startDate + '-' + d.endDate);
+      details.append('div').classed('title', true).append('span').classed('date text-date date-title', true).text(d.startDate + ' to ' + d.endDate);
       details.select(' .title').append('span').classed('position-title text-position', true).text(d.name);
       details.append('div').classed('place-name text-place hovered', true).text(d.placeName);
       details.append('div')
@@ -156,3 +161,7 @@ function drawChart() {
     })
   });
 }
+
+
+// things to add - scale rescale with resizing of window.
+// move longer data earlier
