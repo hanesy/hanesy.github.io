@@ -1,14 +1,12 @@
 [
   {
   "id": 0,
-  "name": "Honor's Bachelor's Degree in Economics",
+  "name": "BA in Economics, Honors",
   "category": "Education",
   "placeName": "University of California, Berkeley",
   "startDate": "2008-08",
   "endDate": "2012-05",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["economics", "statistics"]
 },
 
 {
@@ -18,9 +16,7 @@
   "placeName": "Youth Leadership America",
   "startDate": "2011-09",
   "endDate": "2015-06",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["project management", "program management"]
 },
 
 {
@@ -30,9 +26,7 @@
   "placeName": "University of Southern California",
   "startDate": "2012-08",
   "endDate": "2014-05",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["policy evaluation"]
 },
 
 {
@@ -42,9 +36,7 @@
   "placeName": "Neighborhood Academic Initiative",
   "startDate": "2013-08",
   "endDate": "2014-06",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["data analysis", "program evaluation"]
 },
 
 {
@@ -54,9 +46,7 @@
   "placeName": "Management Partners",
   "startDate": "2014-07",
   "endDate": "2018-08",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["organizational evaluation", "project management", "stakeholder engagement"]
 },
 {
   "id": 5,
@@ -65,9 +55,7 @@
   "placeName": "Youth Leadership America",
   "startDate": "2015-06",
   "endDate": "2019-05",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["organizational administration", "strategy"]
 },
 
 
@@ -78,9 +66,7 @@
   "placeName": "Seed Academy",
   "startDate": "2018-03",
   "endDate": "2018-07",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["project management", "web development"]
 },
 
 {
@@ -90,33 +76,27 @@
   "placeName": "Education Pioneers",
   "startDate": "2018-06",
   "endDate": "2018-08",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["program evaluation", "strategy", "stakeholder engagement"]
 },
 
 {
   "id": 8,
-  "name": "Project Manager",
+  "name": "Manager of Strategic Initiatives ",
   "category": "Work",
   "placeName": "ACE Charter Schools",
   "startDate": "2018-09",
   "endDate": "2019-06",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["project management", "stakeholder engagement", "strategy"]
 },
 
 {
   "id": 9,
-  "name": "Data Analytics and Visualization",
+  "name": "Analytics and Visualization Program",
   "category": "Education",
   "placeName": "UC Berkeley Extension",
   "startDate": "2019-10",
   "endDate": "2020-06",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["analytics", "visualization", "technical languages"]
 },
 
 {
@@ -126,9 +106,7 @@
   "placeName": "Management Partners",
   "startDate": "2019-11",
   "endDate": "2020-07",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
+  "skills": ["analytics", "dashboards", "project management", "strategy"]
 }
 
 ]

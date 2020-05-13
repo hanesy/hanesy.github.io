@@ -4,11 +4,14 @@ function drawChart() {
   var svgArea = d3.select("body").select("svg");
  
   if (!svgArea.empty()) {
-    $('#timelineChart').empty();
+    $('#timelineChart_rect').empty();
   }
-  var svgWidth = window.innerWidth;
-  var svgHeight = window.innerHeight*.5;
+  var svgWidth =  $("#timelineChart_rect").width();
+  var svgHeight =  $("#timelineChart_rect").height();
   
+  console.log(svgWidth);
+  console.log(svgHeight);
+
   var margin = {
     top: 20,
     right: 40,
@@ -20,17 +23,17 @@ function drawChart() {
   var height = svgHeight - margin.top - margin.bottom;
 
   var svg = d3
-  .select("#timelineChart")
+  .select("#timelineChart_rect")
   .append("svg")
   .attr('id','Chart')
-  // .attr("width", svgWidth).attr("height", svgHeight);
+  .attr("width", svgWidth).attr("height", svgHeight);
 
   var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`)
 
 
-  // d3.json("data/timeline_chrono.json").then(function(data, err) {
-    d3.json("https://raw.githubusercontent.com/hanesy/hanesy.github.io/master/data/timeline_chrono.json").then(function(data, err) {
+  d3.json("data/timeline_chrono.json").then(function(data, err) {
+    // d3.json("https://raw.githubusercontent.com/hanesy/hanesy.github.io/master/data/timeline_chrono.json").then(function(data, err) {
       if (err) throw err;
 
       function convertToTimeStamp(date) {
@@ -108,15 +111,26 @@ function drawChart() {
       
       var toolTip = d3.tip()
       .attr("class", "d3-tip")
-      .offset([0, 0])
+      .direction('s')
+      // .offset([0, 0])
       .html(function(d) {
           return (`<strong>${(d.name)}</strong> <br> 
                   From ${(d.startDate)} to ${(d.endDate)}<br>
-                  at ${(d.placeName)}`);
+                  at ${(d.placeName)}<br> - <br>
+                  <strong>Skills</strong> <br> 
+                   ${(d.skills.join("<br>"))}`);
       });
 
-    chartGroup.call(toolTip);
 
+      // function returnSkills(data){
+      //   skills_list = data.skills;
+
+      //   skillslist.ForEach
+
+      //   return skills_text
+      // }
+
+    chartGroup.call(toolTip);
     rectGroup
     .on("mouseover", function(d) {
       d3.select(this)

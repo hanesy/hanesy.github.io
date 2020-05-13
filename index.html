@@ -12,9 +12,14 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://code.highcharts.com/gantt/highcharts-gantt.js"></script>
     <!-- End libs -->
 
+    <!-- <script type="text/javascript" src="assets/timeline_hc.js"></script> -->
     <script type="text/javascript" src="assets/timeline_rect.js"></script>
+    <!-- <script type="text/javascript" src="assets/timeline_circ.js"></script> -->
+
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Thasadith" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
@@ -73,12 +78,14 @@
     <div class="col-md-12 text-center"><h1 class=title>Heain Yee</h1></div>
 </div>
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-7">
       <div class = "row" id='timeline'>
         <h2>My Experience</h2>
       </div>
-        <div class = "row" id='timelineChart' ></div>
+        <div class = "row">
+          <div id = 'timelineChart'></div>
+        </div>
         <div class = "row" id='timelineInfo'>(placeholder)</div>
     </div>
 
@@ -86,9 +93,11 @@
       <h2>Summary</h2>
     </div>
   
-  </div>
+  </div> -->
 
-  <!-- <div id='timelineChart'></div> -->
+  <!-- <div id='timelineChart_hc'></div> -->
+  <div id='timelineChart_rect' style = "height: 500px"></div>
+  <!-- <div id='timelineChart_circ'></div> -->
 
   </body>
 </html>
