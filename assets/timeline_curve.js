@@ -31,8 +31,8 @@ function drawChart() {
 
   // console.log("drew line")
   
-  // d3.json("data/timeline.json").then(function(data) {
-    d3.json("https://raw.githubusercontent.com/hanesy/hanesy.github.io/master/data/timeline.json").then(function(data) {
+  d3.json("data/timeline.json").then(function(data) {
+    // d3.json("https://raw.githubusercontent.com/hanesy/hanesy.github.io/master/data/timeline.json").then(function(data) {
 
       let allGroups = svg.selectAll('g').data(data);
       let group = allGroups.enter().append('g').attr('id', function(data){return 'group-' + data.id});
@@ -76,31 +76,35 @@ function drawChart() {
       }
 
       function originalCircle(data){
-        return ((convertToTimeStamp(data.endDate) - convertToTimeStamp(data.startDate))*.70)
+        return ((convertToTimeStamp(data.endDate) - convertToTimeStamp(data.startDate))*1.5)
       }
 
-      group.append('circle')
+      group.append('ellipse')
       .attr('cx', function(data) {return scaleLine(findMidPoint(data));})
       .attr('cy', '50%')
-      .attr('r', function(data) {return scaleCircle(originalCircle(data));})
-      .attr('fill-opacity', 0.5)
+      .attr('rx', function(data) {return scaleCircle(originalCircle(data));})
+      .attr('ry', function(data) {return scaleCircle(originalCircle(data)/2);})
+      // .attr('fill-opacity', .5)
+      .attr('fill-opacity', function (data) {return (1-originalCircle(data)/500000000000);})
       .attr('class', function(data) { return('circle-category circle-' + data.category.toLowerCase())})
       .attr('id', function(data) {
         return 'circle-' + data.id
       })
       // When hover a circle
       .on('mouseover', function(d, i) {
-        d3.select(this).attr('r', function(data) {return scaleCircle(convertToTimeStamp(data.endDate) - convertToTimeStamp(data.startDate));});
+        d3.select(this)
+        .attr('rx', function(data) {return scaleCircle(originalCircle(data));})
+        .attr('ry', function(data) {return scaleCircle(originalCircle(data)/3*2);});
         d3.select(this).classed('circle-hovered', true);
         d3.select(this.parentNode).selectAll('text').style('opacity', 1);
-        // d3.select(this.parentNode).selectAll('.text-place').classed('hovered', true).style('opacity', 0);
+        // d3.select("this.parentNode").selectAll('.text-place').classed('hovered', true).style('opacity', 0);
         // // d3.select(this.parentNode).selectAll('.text-desc').classed('hovered', true).style('opacity', 0);
         // d3.select(this.parentNode).selectAll('.text-date-end').classed('hovered', true).style('opacity', 0);
       })
       // When un-hover a circle
       .on('mouseout', function(d, i){
         d3.select(this)
-        .attr('r', function(data) {return scaleCircle(originalCircle(data));});
+        .attr('rx', function(data) {return scaleCircle(originalCircle(data));}).attr('ry', function(data) {return scaleCircle(originalCircle(data)/2);});
         d3.select(this).classed('circle-hovered', false);
         d3.select(this.parentNode).selectAll('text').style('opacity', 0);
       })
@@ -139,7 +143,7 @@ function drawChart() {
         return scaleLine(findMidPoint(data));
       }
     })
-    .attr('y', '62%')
+    .attr('y', '63%')
     .attr('class', 'text-date')
     .style('opacity', 0);
 
@@ -172,3 +176,4 @@ function drawChart() {
 // list out the skills and description...
 // use a rectangular div?
 // color legend
+// ovals?

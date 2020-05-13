@@ -1,7 +1,44 @@
 html {
   padding: 20px 50px;
 }
-h2 {
+
+.education
+{
+  color: #ba78e0;
+  fill:  #ba78e0;
+}
+
+.volunteer
+{
+  color: #f6b93b;
+  fill:  #f6b93b;
+}
+
+.extra
+{
+  color: #78e08f;
+  fill:  #78e08f;
+}
+
+.work
+{
+  color: #888;
+  fill:  #888;
+}
+
+.d3-tip {
+  padding: 6px;
+  font-size: 12px;
+  line-height: 1;
+  line-height: 1.5em;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+
+/* h2 { 
   font-family: 'Thasadith', sans-serif;
   font-size: 32px;
 }
@@ -39,11 +76,11 @@ h2 {
   transition: fill 1s, r 0.9s;
   -webkit-transition: fill 1s, r 0.9s;
 }
-/* .text-date,
+.text-date,
 .text-position {
   transition: opacity 0.7s ease-in-out;
   -webkit-transition: opacity 0.7s ease-in-out;
-} */
+}
 .text-date {
   fill: #888;
   font-family: 'Thasadith', sans-serif;
@@ -95,4 +132,4 @@ h2 {
 }
 .details {
   transition: opacity 1s ease-in-out;
-}
+}*/

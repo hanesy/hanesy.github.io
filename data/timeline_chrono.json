@@ -10,6 +10,7 @@
   "skills": ["TBD"
   ]
 },
+
 {
   "id": 1,
   "name": "Director of Youth Camp",
@@ -21,31 +22,9 @@
   "skills": ["TBD"
   ]
 },
-{
-  "id": 2,
-  "name": "Analyst to Senior Analyst",
-  "category": "Work",
-  "placeName": "Management Partners",
-  "startDate": "2014-07",
-  "endDate": "2018-08",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
-},
-{
-  "id": 3,
-  "name": "Board Member and Treasurer",
-  "category": "Volunteer",
-  "placeName": "Youth Leadership America",
-  "startDate": "2015-06",
-  "endDate": "2019-05",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
-},
 
 {
-  "id": 4,
+  "id": 2,
   "name": "Master of Public Policy",
   "category": "Education",
   "placeName": "University of Southern California",
@@ -57,7 +36,67 @@
 },
 
 {
+  "id": 3,
+  "name": "Data Analyst",
+  "category": "Work",
+  "placeName": "Neighborhood Academic Initiative",
+  "startDate": "2013-08",
+  "endDate": "2014-06",
+  "description":["TBD"],
+  "skills": ["TBD"
+  ]
+},
+
+{
+  "id": 4,
+  "name": "Analyst to Senior Analyst",
+  "category": "Work",
+  "placeName": "Management Partners",
+  "startDate": "2014-07",
+  "endDate": "2018-08",
+  "description":["TBD"],
+  "skills": ["TBD"
+  ]
+},
+{
   "id": 5,
+  "name": "Board Member and Treasurer",
+  "category": "Volunteer",
+  "placeName": "Youth Leadership America",
+  "startDate": "2015-06",
+  "endDate": "2019-05",
+  "description":["TBD"],
+  "skills": ["TBD"
+  ]
+},
+
+
+{
+  "id": 6,
+  "name": "Project Manager",
+  "category": "Volunteer",
+  "placeName": "Seed Academy",
+  "startDate": "2018-03",
+  "endDate": "2018-07",
+  "description":["TBD"],
+  "skills": ["TBD"
+  ]
+},
+
+{
+  "id": 7,
+  "name": "Summer Fellowship",
+  "category": "Work",
+  "placeName": "Education Pioneers",
+  "startDate": "2018-06",
+  "endDate": "2018-08",
+  "description":["TBD"],
+  "skills": ["TBD"
+  ]
+},
+
+{
+  "id": 8,
   "name": "Project Manager",
   "category": "Work",
   "placeName": "ACE Charter Schools",
@@ -67,8 +106,9 @@
   "skills": ["TBD"
   ]
 },
+
 {
-  "id": 6,
+  "id": 9,
   "name": "Data Analytics and Visualization",
   "category": "Education",
   "placeName": "UC Berkeley Extension",
@@ -80,31 +120,6 @@
 },
 
 {
-  "id": 7,
-  "name": "Data Analyst",
-  "category": "Work",
-  "placeName": "Neighborhood Academic Initiative",
-  "startDate": "2013-08",
-  "endDate": "2014-06",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
-},
-
-
-{
-  "id": 8,
-  "name": "Project Manager",
-  "category": "Volunteer",
-  "placeName": "Seed Academy",
-  "startDate": "2018-03",
-  "endDate": "2018-07",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
-}
-,
-{
   "id": 10,
   "name": "Senior Analyst and Project Manager",
   "category": "Work",
@@ -114,19 +129,6 @@
   "description":["TBD"],
   "skills": ["TBD"
   ]
-},
-{
-  "id": 9,
-  "name": "Summer Fellowship",
-  "category": "Work",
-  "placeName": "Education Pioneers",
-  "startDate": "2018-06",
-  "endDate": "2018-08",
-  "description":["TBD"],
-  "skills": ["TBD"
-  ]
 }
-
-
 
 ]
