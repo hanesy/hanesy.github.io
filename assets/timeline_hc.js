@@ -7,14 +7,11 @@ today.setUTCMinutes(0);
 today.setUTCSeconds(0);
 today.setUTCMilliseconds(0);
 
-var startScale = new Date("2008-08-30");
-var endScale = new Date(Date.now());
-
 
 // https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/gantt/demo/with-navigation
 // https://www.highcharts.com/docs/gantt/gantt-axis-grid
 
-var chartColors = ["#324759", "#A60321", "#CEE8F2", "#D9A84E","#D9D5D2","#A6705D", "#8F8684"];
+var chartColors = ["#D99177", "#645D73", "#F2DBCE", "#467F71", "#3C5973","#003836","#323232"];
 
 document.addEventListener('DOMContentLoaded', function(){
 // THE CHART

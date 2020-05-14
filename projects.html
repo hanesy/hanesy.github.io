@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Libs -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/gantt/highcharts-gantt.js"></script> -->
+    <!-- End libs -->
+
+    <link rel="stylesheet" href="assets/HY.css">
+    <title>HY</title>
+  </head>
+
+
+  <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand" href="index.html">HY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.html">resume</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            projects
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="projects.html"> <strong> see all projects </strong></a>
+            <a class="dropdown-item" href="https://hanesy.github.io/NBA_Playoffs/" target="_blank"> predicting NBA playoffs </a>
+            <a class="dropdown-item" href="https://public.tableau.com/profile/heain#!/vizhome/Tableau-Challenge_15863863626670/StoryBoard" target="_blank"> CitiBike ridership - viz story </a>
+            <a class="dropdown-item" href="https://olympics-dash.herokuapp.com/" target="_blank"> Olympics dashboard</a>
+            <a class="dropdown-item" href="https://icma.org/articles/doing-data-right" target="_blank"> doing data right</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row topBanner">
+    <div class="col-md-12 text-center" ><h1 class=title>Projects</h1>
+    </div>
+  </div>
+
+
+    <div class = "row">
+      <div class="col-md-3">
+        <div class="card" >
+          <div class="card-body">
+              <h5 class="card-title">Predicting NBA Playoffs (1980-2020)</h5>
+              <p class="card-text">Machine learning with three different types of models to predict NBA play-off teams based on season statistics.<br>-<br> Using Python, sklearn, joblib, numpy, pandas, html, js. </p>
+              <a href="https://hanesy.github.io/NBA_Playoffs/" class="btn btn-primary" target="_blank">Live Website</a><br>
+              <a href="https://github.com/hanesy/NBA_Playoffs" class="btn btn-primary" target="_blank">Github</a>
+          </div>
+      </div> 
+      </div>
+
+      <div class="col-md-3">
+        <div class="card" >
+          <div class="card-body">
+              <h5 class="card-title">2019 CitiBike Ridership - Jersey City</h5>
+              <p class="card-text">Visualizing Citi Bike data finds those born in the 1960's were a significant part of the 2019 growth in summer ridership.<br>-<br> Using Tableau. </p>
+              <a href="https://public.tableau.com/profile/heain#!/vizhome/Tableau-Challenge_15863863626670/StoryBoard" class="btn btn-primary" target="_blank">Tableau Public</a><br>
+          </div>
+      </div> 
+      </div>
+
+      <div class="col-md-3">
+        <div class="card" >
+          <div class="card-body">
+              <h5 class="card-title">Olympics Dashboard </h5>
+              <p class="card-text">Dynamic dashboard to review the relevance of population & GDP to countries' performances at the Olympics.<br>-<br> Using Python, Pandas, Flask, SQLite, JS, Leaflet, Highcharts, html, D3. Deployed using Heroku. </p>
+              <a href="https://olympics-dash.herokuapp.com/" class="btn btn-primary" target="_blank">Live Website</a><br>
+              <a href="https://github.com/hanesy/olympics_dash" class="btn btn-primary" target="_blank">Github</a>
+          </div>
+      </div> 
+      </div>
+
+      <div class="col-md-3">
+        <div class="card" >
+          <div class="card-body">
+              <h5 class="card-title">Doing Data Right </h5>
+              <p class="card-text">Lessons from San Jose, Cincinnati, and Kansas City on ways governments can be successful in their data efforts.<br>-<br> Cited Resource at Johns Hopkins University University - GovEx Academy. </p>
+              <a href="https://icma.org/articles/pm-magazine/doing-data-right" class="btn btn-primary" target="_blank">Article</a><br>
+          </div>
+      </div> 
+      </div>
+    </div>
+
+    <div class = "row">
+      <div class="col-md-3">
+        <div class="card" >
+          <div class="card-body">
+              <h5 class="card-title">Classifying Exoplanets</h5>
+              <p class="card-text">Machine learning models to classify exoplanets from the raw dataset. <br>-<br> Using Python, sklearn, joblib, numpy, pandas, matplotlib.</p>
+              <a href="https://github.com/hanesy/machine-learning-challenge" class="btn btn-primary" target="_blank">Github</a>
+          </div>
+      </div> 
+      </div>
+
+      <div class="col-md-3">
+        <div class="card" >
+          <div class="card-body">
+              <h5 class="card-title">Automobile Accidents Across United States</h5>
+              <p class="card-text">Analysis of reported car accidents across the United States between 2016 and 2019. <br>-<br> Using Pandas, Matplotlib, and Plotly. </p>
+              <a href="https://github.com/hanesy/accidents_us" class="btn btn-primary" target="_blank">Github</a>
+          </div>
+      </div> 
+      </div>
+
+      <!-- <div class="col-md-3">
+        <div class="card" >
+          <div class="card-body">
+              <h5 class="card-title">Title</h5>
+              <p class="card-text">Machine learning with three different types of models to predict NBA play-off teams based on season statistics.<br> Using Python, sklearn, joblib, numpy, pandas, html, js. </p>
+              <a href="#" class="btn btn-primary" target="_blank">Live Website</a><br>
+              <a href="#" class="btn btn-primary" target="_blank">Github</a>
+          </div>
+      </div> 
+      </div>
+      
+      <div class="col-md-3">
+        <div class="card" >
+          <div class="card-body">
+              <h5 class="card-title">Title</h5>
+              <p class="card-text">Machine learning with three different types of models to predict NBA play-off teams based on season statistics.<br> Using Python, sklearn, joblib, numpy, pandas, html, js. </p>
+              <a href="#" class="btn btn-primary" target="_blank">Live Website</a><br>
+              <a href="#" class="btn btn-primary" target="_blank">Github</a>
+          </div>
+      </div> 
+      </div> -->
+    </div>
+
+
+
+  <footer id="footer">
+    <div style = "display: inline-block"><a href="https://github.com/hanesy" target="_blank" ><img src="/assets/images/gh.png" height = '40' alt=""><br>Github</a></div>
+    <div style = "display: inline-block"><a href="https://www.linkedin.com/in/heain-yee-82105818/" target="_blank"><img src="/assets/images/li.png" height = '40' alt=""><br>LinkedIn</a></div>
+    <div style = "display: inline-block"><a href="mailto: heainyee@gmail.com" target="_blank"><img src="/assets/images/email.png" height = '40' alt=""><br>Email</a></div>
+  </footer>
+  </body>
+</html>

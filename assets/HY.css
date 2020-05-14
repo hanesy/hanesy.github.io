@@ -12,16 +12,6 @@ html {
   border: 2px solid gray;
 }
 
-.navbar-brand
-{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: right;
-    margin: auto;
-    padding: 15px;
-}
-
 .topBanner{
   /* background: #F2F2F2; */
   color: #3C5973;
@@ -30,12 +20,10 @@ html {
 }
 
 .mainBar{
-  margin-top: 10px;
-  margin-bottom: 10px;
   /* background: #D9958F; */
   background: #F2F2F2;
   text-align: left;
-  padding: 50px;
+  padding: 5px;
   margin: 0px;
   color: #3C5973;
 }
@@ -61,27 +49,28 @@ html {
   margin: 20px;
 }
 
-
-
 #timelineChart_hc {
   position: relative;
   width: 100% !important;
 }
 
+.mainBar em {
+    color: #3E939E;
+    font-weight: bolder;
+}
+
+.topBanner em {
+    color: #3E939E;
+}
 
 
+.card {
+    /* height: 350px; */
+    font-size: 80%;
+    margin: 10px;
+}
 
-
-/* #A1A624
-#8C873F
-#BFB999
-#F2DBCE
-#D9958F
- */
-
- /* #E5DCB9
- #B5AE92
- #656152
- #F2E8C3
- #CBC4A4
-  */
+.btn{
+    margin: 2px;
+    background: #3E939E;
+}
