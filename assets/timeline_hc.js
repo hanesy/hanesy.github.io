@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function(){
     xAxis: {
         type: 'datetime',
         min : Date.UTC(2008, 0, 1),
-        max : Date.UTC(2020, 11, 1),
-        tickInterval : 3 * 30 * 24 * 3600 * 1000,
+        max : Date.UTC(2020, 11, 31),
+        tickInterval :  3 * 30 * 24 * 3600 * 1000,
         dateTimeLabelFormats: { // don't display the dummy year
             // month: '%e. %b',
-            year: '%b'
+            year: '%Y'
         },
-        visible: false
+        visible: false,
     },
 
     tooltip: 
