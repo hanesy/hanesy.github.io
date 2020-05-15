@@ -78,7 +78,7 @@ body {
 
 #enneagram {
   position: relative;
-  height: 100% !important;
+  width: 100% !important;
   margin-bottom: 15px;
 }
 
