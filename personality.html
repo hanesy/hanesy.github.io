@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Libs -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script> -->
+    <script src="https://code.highcharts.com/gantt/highcharts-gantt.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+    <!-- End libs -->
+
+    <script type="text/javascript" src="assets/personality.js"></script>
+    
+    <link rel="stylesheet" href="assets/HY.css">
+    <title>HY</title>
+  </head>
+
+  <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand" href="index.html">HY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about me</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="personality.html">personality</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.html">resume</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            projects
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="projects.html"> <strong> see all projects </strong></a>
+            <a class="dropdown-item" href="https://hanesy.github.io/NBA_Playoffs/" target="_blank"> predicting NBA playoffs </a>
+            <a class="dropdown-item" href="https://public.tableau.com/profile/heain#!/vizhome/Tableau-Challenge_15863863626670/StoryBoard" target="_blank"> CitiBike ridership - viz story </a>
+            <a class="dropdown-item" href="https://olympics-dash.herokuapp.com/" target="_blank"> Olympics dashboard</a>
+            <a class="dropdown-item" href="https://icma.org/articles/doing-data-right" target="_blank"> doing data right</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class = "container">
+    <div class="row topBanner">
+      <div class="col-md-12 text-center" ><h1 class=title>Personality</h1>
+        <p> <em> learning about self and others through different frameworks</em></p>
+      </div>
+    </div>
+
+
+    <div class="row mainBar">
+      <div class="col-md-5" id = "center">
+        <h4>Current MBTI: <a href = "https://www.16personalities.com/infj-personality">INFJ-T (The Advocate)</a></h4>
+        <article>Taken May 2020 by <a href="https://www.16personalities.com/" target="_blank" >16 personalities</a>.</article>
+        <div id = "MBTI"></div>
+      </div>
+      <div class="col-md-7" id = "center">
+        <p>Meyer's Briggs Type Indicator (MBTI) tests have been one of the earliest ones I have been introduced to: I remember taking it in 8th or 9th grade as a class assignment.</p> 
+        <p>My type changed a few times over the years, but outcomes were always subtly determined (i.e., my dominant %'s were less than 65%). But recently, I've tested consistently as INFJ over the past few years. </p>
+        
+        <p>The more I look at available resources on this topic, the more I accept that I am a textbook INFJ. (The fact that I look for these resources is also characteristically INFJ)</p>
+        <hr>
+        <p><strong> Excerpt from Introduction to <a href="https://www.16personalities.com/infj-personality/" target="_blank" >INFJ profile</a> (from <a href="https://www.16personalities.com/" target="_blank" >16 personalities</a>)... </strong><br>
+        <i>... Advocates have an inborn sense of idealism and morality, but what sets them apart is that they are not idle dreamers. These individuals are capable of taking concrete steps to realize their goals and make a lasting positive impact.<br>
+        People with this personality type tend to see helping others as their purpose in life. Advocates can often be found engaging in rescue efforts and doing charity work. However, their real passion is to get to the heart of the issue so that people need not be rescued at all...</p></i>
+      </div>
+
+    </div>
+    <div class="row secondBar">
+      <div class="col-md-8" id = "center">
+        <h4>Current Creative Type: <a href="https://mycreativetype.com/type/thinker/">The Thinker</a></h4>
+        <article>Taken May 2020 <a href="https://mycreativetype.com/" target="_blank" >by Adobe Create</a>.</article>
+        <p>This is a more abstract (fun?) test one of my colleagues shared with me. My most recent result is as "The Thinker", but When I took this back in October 2019, I tested as "The Maker".</p>
+        <p><strong>The difference in the creative types are nuanced, but with similaries around the focus on critical thinking, problem solving, and dedication to whatever topic is at hand.</p></strong>
+        <hr>
+        <p><a href="https://mycreativetype.com/type/thinker/">The Thinker</a> (Current)</p>
+        <ul>
+          <li>Creative Strengths: intellectual curiosity, ability to find and create meaning </li>
+          <li>Untapped Potential: bridging theory and practice, applying ideas in real life </li>
+          <li>Ideal Collaborator: The Adventurer </li>
+        </ul>
+        <hr>
+        <p><a href="https://mycreativetype.com/type/maker/">The Maker</a> (October 2019)</p>
+        <ul>
+          <li>Creative Strengths: Focus and dedication, ability to achieve mastery </li>
+          <li>Untapped Potential: Taking creative risks, finding joy and play in the process</li>
+          <li>Ideal Collaborator: The Visionary </li>
+        </ul>
+
+
+      </div>
+      <div class="col-md-4 text-center"id = "center" >
+        <image src="/assets/images/The_Thinker_Gif.gif">
+      </div>
+
+
+    </div>
+
+    <div class="row mainBar">
+      <div class="col-md-6" id = "center">
+        <h4>Current Enneagrams: Type 8, Type 5, Type 6</h4>
+        <article>Taken May 2020 by <a href="https://www.truity.com/test/enneagram-personality-test" target="_blank" >Truity</a>.</article>
+        <div id = "enneagram"></div>
+      </div>
+      <div class="col-md-6" id = "center">
+        <p>Enneagram takes 9 archetypes and matches people based on a series of questions. The result tells you how much the personality overlaps aligns with different archetypes. Because of the methodology, I think it's entirely possible to have 100% matches (or 0% matches) with all of the archetypes.</p>
+
+        <p> When I took the test in May 2020, I was more sure of my answers, so the outcome was higher rates of alignment (75%+). I was less sure in October 2019, so most of my answers were toward the middle (50%). I saw major changes in some areas, but others remained pretty consistent. </p> 
+        <hr>
+        <p><strong>For this test, I find it most useful to observe the top 3 to gain insights.</strong> <br> Top 3 results for May 2020 and a brief description is below.</p> 
+        <ul>
+          <li>Type 8: Challenger sees themselves as strong and powerful and seek to stand up for what they believe in </li>
+          <li>Type 4: Individualist wants to be unique and to live life authentically, and are highly attuned to their emotional experience. </li>
+          <li>Type 5: Investigator seeks understanding and knowledge, and are more comfortable with data than people.</li>
+        </ul>        
+      </div>
+
+
+    </div>
+
+
+  </div>
+  
+
+
+
+  <footer id="footer">
+    <div style = "display: inline-block"><a href="https://github.com/hanesy" target="_blank" ><img src="/assets/images/gh.png" height = '40' alt=""><br>Github</a></div>
+    <div style = "display: inline-block"><a href="https://www.linkedin.com/in/heain-yee-82105818/" target="_blank"><img src="/assets/images/li.png" height = '40' alt=""><br>LinkedIn</a></div>
+    <div style = "display: inline-block"><a href="mailto: heainyee@gmail.com" target="_blank"><img src="/assets/images/email.png" height = '40' alt=""><br>Email</a></div>
+  </footer>
+  </body>
+</html>
