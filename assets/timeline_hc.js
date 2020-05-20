@@ -11,7 +11,7 @@ today.setUTCMilliseconds(0);
 // https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/gantt/demo/with-navigation
 // https://www.highcharts.com/docs/gantt/gantt-axis-grid
 
-var chartColors = ["#D99177", "#645D73", "#F2DBCE", "#467F71", "#3C5973","#003836","#323232"];
+var chartColors = ["#D99177", "#645D73", "#F2DBCE", "#467F71", "#3C5973","#003836","#7693A6"];
 
 document.addEventListener('DOMContentLoaded', function(){
 // THE CHART
