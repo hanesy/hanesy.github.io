@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
     xAxis: {
         type: 'datetime',
         min : Date.UTC(2008, 0, 1),
-        max : Date.UTC(2020, 11, 31),
+        max : Date.UTC(2023, 07, 31),
         tickInterval :  3 * 30 * 24 * 3600 * 1000,
         dateTimeLabelFormats: { // don't display the dummy year
             // month: '%e. %b',
@@ -90,7 +90,17 @@ document.addEventListener('DOMContentLoaded', function(){
                     color: chartColors[1],
                     start: Date.UTC(2014, 6, 1),
                     end: Date.UTC(2018, 7, 30)
-                }
+                },
+                {
+                    name: 'Managing Director of Data Strategy',
+                    place: 'Teach for America',
+                    id: 'TFA',
+                    parent: 'analysis',
+                    type: "Work",
+                    color: chartColors[1],
+                    start: Date.UTC(2020, 11, 30),
+                    end: today.getTime()
+                },
                 ]
         },
         {
@@ -152,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     type: "Work",
                     color: chartColors[1],
                     start: Date.UTC(2019, 9, 1),
-                    end: today.getTime()
+                    end: Date.UTC(2020, 11, 30)
                 },
                 {
                     name: 'Analytics and Visualization Certification',
@@ -163,7 +173,17 @@ document.addEventListener('DOMContentLoaded', function(){
                     color: chartColors[0],
                     start: Date.UTC(2019, 9, 1),
                     end: Date.UTC(2020, 4, 30)
-                }
+                },
+                {
+                    name: 'Managing Director of Data Strategy',
+                    place: 'Teach for America',
+                    id: 'TFA',
+                    parent: 'Data and Viz',
+                    type: "Work",
+                    color: chartColors[1],
+                    start: Date.UTC(2020, 11, 30),
+                    end: today.getTime()
+                },
                 ]
         },
         {
@@ -225,8 +245,18 @@ document.addEventListener('DOMContentLoaded', function(){
                     type: "Work",
                     color: chartColors[1],
                     start: Date.UTC(2019, 10, 1),
+                    end: Date.UTC(2020, 11, 30)
+                },
+                {
+                    name: 'Managing Director of Data Strategy',
+                    place: 'Teach for America',
+                    id: 'TFA',
+                    parent: 'PM',
+                    type: "Work",
+                    color: chartColors[1],
+                    start: Date.UTC(2020, 11, 30),
                     end: today.getTime()
-                }
+                },
 
                 ]
         },
@@ -269,6 +299,16 @@ document.addEventListener('DOMContentLoaded', function(){
                     type: "Work",
                     color: chartColors[1],
                     start: Date.UTC(2019, 10, 1),
+                    end: Date.UTC(2020, 11, 30)
+                },
+                {
+                    name: 'Managing Director of Data Strategy',
+                    place: 'Teach for America',
+                    id: 'TFA',
+                    parent: 'OS',
+                    type: "Work",
+                    color: chartColors[1],
+                    start: Date.UTC(2020, 11, 30),
                     end: today.getTime()
                 },
                 ]
